@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PROJETO IFSP</title>
+
+    <!-- Biblioteca W3.CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Font Awesome (apenas uma vez) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -21,72 +25,55 @@
 
         #main {
             margin-top: 100px;
-        }
-
-        .w3-row-padding img {
-            margin-bottom: 12px;
-            max-width: 100%;
-            height: auto;
-        }
-
-        @media only screen and (max-width: 600px) {
-            #main {
-                margin-top: 120px;
-            }
-        }
-
-        .slide-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .slides,
-        .text {
-            width: 100%;
+            padding: 16px;
         }
 
         .navbar-center {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            width: 100%;
+            justify-content: center;
+            background-color: #000;
         }
 
         .navbar-center a {
-            flex: 1 1 30%;
+            flex: 1 0 120px; /* Cresce, mas no mínimo 120px */
             text-align: center;
-            padding: 10px 12px;
-            min-width: 100px;
+            padding: 12px 8px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .navbar-center a i {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .navbar-center a:hover {
+            color: #4CAF50;
+            background-color: #111;
+        }
+
+        @media (min-width: 601px) {
+            .navbar-center a {
+                border-bottom: none;
+                flex: none;
+            }
         }
     </style>
 </head>
 
 <body class="w3-white">
 
-    <nav class="w3-bar w3-black w3-top navbar-center">
-        <a href="#home" class="w3-bar-item w3-button w3-hover-text-green w3-text-white">
-            <i class="fa fa-home w3-large"></i><br>HOME
-        </a>
-        <a href="#sobre" class="w3-bar-item w3-button w3-hover-text-green w3-text-white">
-            <i class="fa fa-user w3-large"></i><br>SOBRE
-        </a>
-        <a href="#gradeC" class="w3-bar-item w3-button w3-hover-text-green w3-text-white">
-            <i class="fa fa-columns w3-large"></i><br>GRADE
-        </a>
-        <a href="#Docentes" class="w3-bar-item w3-button w3-hover-text-green w3-text-white">
-            <i class="fa fa-address-card w3-large"></i><br>DOCENTES
-        </a>
-        <a href="#mercado" class="w3-bar-item w3-button w3-hover-text-green w3-text-white">
-            <i class="fa fa-handshake-o w3-large"></i><br>MERCADO
-        </a>
-        <a href="#tecnologias" class="w3-bar-item w3-button w3-hover-text-green w3-text-white">
-            <i class="fa fa-connectdevelop w3-large"></i><br>TECNOLOGIAS
-        </a>
-        <a href="#contato" class="w3-bar-item w3-button w3-hover-text-green w3-text-white">
-            <i class="fa fa-envelope w3-large"></i><br>CONTATO
-        </a>
+    <nav class="w3-top navbar-center">
+        <a href="#home"><i class="fa fa-home"></i>HOME</a>
+        <a href="#sobre"><i class="fa fa-user"></i>SOBRE</a>
+        <a href="#gradeC"><i class="fa fa-columns"></i>GRADE</a>
+        <a href="#Docentes"><i class="fa fa-address-card"></i>DOCENTES</a>
+        <a href="#mercado"><i class="fa fa-handshake-o"></i>MERCADO</a>
+        <a href="#tecnologias"><i class="fa fa-connectdevelop"></i>TECNOLOGIAS</a>
+        <a href="#contato"><i class="fa fa-envelope"></i>CONTATO</a>
     </nav>
     
     <div class="w3-padding-large" id="main">
