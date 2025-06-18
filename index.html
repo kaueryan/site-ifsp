@@ -6,21 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PROJETO IFSP</title>
 
-    <!-- Biblioteca W3.CSS -->
+    <!-- W3.CSS (apenas para estrutura) -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!-- Font Awesome (apenas uma vez) -->
+    <!-- Font Awesome (único ícone) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        body {
             font-family: "Montserrat", sans-serif;
+            margin: 0;
         }
 
         #main {
@@ -28,35 +23,39 @@
             padding: 16px;
         }
 
-        .navbar-center {
+        .navbar {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             background-color: #000;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
         }
 
-        .navbar-center a {
-            flex: 1 0 120px; /* Cresce, mas no mínimo 120px */
+        .navbar a {
+            flex: 1 1 120px;
+            max-width: 150px;
             text-align: center;
             padding: 12px 8px;
             color: white;
             text-decoration: none;
-            border-bottom: 1px solid #333;
         }
 
-        .navbar-center a i {
+        .navbar a i {
             display: block;
             font-size: 20px;
             margin-bottom: 4px;
         }
 
-        .navbar-center a:hover {
+        .navbar a:hover {
             color: #4CAF50;
             background-color: #111;
         }
 
         @media (min-width: 601px) {
-            .navbar-center a {
+            .navbar a {
                 border-bottom: none;
                 flex: none;
             }
@@ -64,9 +63,10 @@
     </style>
 </head>
 
-<body class="w3-white">
+<body>
 
-    <nav class="w3-top navbar-center">
+    <!-- NAVBAR -->
+    <nav class="navbar">
         <a href="#home"><i class="fa fa-home"></i>HOME</a>
         <a href="#sobre"><i class="fa fa-user"></i>SOBRE</a>
         <a href="#gradeC"><i class="fa fa-columns"></i>GRADE</a>
