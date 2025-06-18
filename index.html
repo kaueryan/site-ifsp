@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PROJETO IFSP</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,6 +25,8 @@
 
         .w3-row-padding img {
             margin-bottom: 12px;
+            max-width: 100%;
+            height: auto;
         }
 
         @media only screen and (max-width: 600px) {
@@ -34,31 +37,28 @@
 
         .slide-content {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
             padding: 20px;
         }
 
-        .slides {
-            flex: 1;
-            max-width: 60%;
-        }
-
+        .slides,
         .text {
-            flex: 1;
-            padding-left: 20px;
+            width: 100%;
         }
 
         .navbar-center {
             display: flex;
-            justify-content: space-around;
-            /* Distribui os itens igualmente */
             flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
         }
 
         .navbar-center a {
+            flex: 1 1 30%;
             text-align: center;
             padding: 10px 12px;
+            min-width: 100px;
         }
     </style>
 </head>
@@ -88,7 +88,7 @@
             <i class="fa fa-envelope w3-large"></i><br>CONTATO
         </a>
     </nav>
-
+    
     <div class="w3-padding-large" id="main">
         <header class="w3-container w3-padding-32 w3-center" id="home">
             <h1>
